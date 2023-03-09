@@ -146,18 +146,11 @@ export class News extends Component {
             <div className='container my-3'>
                 <h2>DevNews - Top Headlines</h2>
                 <div className="row">
-                    <div className="col md-4 my-3">
-                        <NewsItems title="Newstitle" description="Some quick example text to build on the card title and make up the bulk of the card's content." imageURL="https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_an_Angular_Developer.jpg" />
-                    </div>
-                    <div className="col md-4 my-3">
-                        <NewsItems title="Newstitle" description="Some quick example text to build on the card title and make up the bulk of the card's content." imageURL="https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_an_Angular_Developer.jpg" />
-                    </div>
-                    <div className="col md-4 my-3">
-                        <NewsItems title="Newstitle" description="Some quick example text to build on the card title and make up the bulk of the card's content." imageURL="https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_an_Angular_Developer.jpg" />
-                    </div>
-                    <div className="col md-4 my-3">
-                        <NewsItems title="Newstitle" description="Some quick example text to build on the card title and make up the bulk of the card's content." imageURL="https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_an_Angular_Developer.jpg" />
-                    </div>
+                    {this.state.articles.map((element) => {
+                        return <div className="col md-4 my-3" key={element.url}>
+                            <NewsItems title={element.title.slice(0, 45)} description={element.description.slice(0, 88)} imageUrl={element.urlToImage} newsUrl={element.url} />
+                        </div>
+                    })}
                 </div>
             </div>
         )
