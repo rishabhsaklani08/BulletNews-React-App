@@ -18,9 +18,9 @@ export class Navbar extends Component {
                                     <a className="nav-link active" aria-current="page" href="/">Home</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/">Link</a>
+                                    <a className="nav-link" href="/">About</a>
                                 </li>
-                                <li className="nav-item dropdown">
+                                {/* <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Dropdown
                                     </a>
@@ -30,7 +30,7 @@ export class Navbar extends Component {
                                         <li><hr className="dropdown-divider" /></li>
                                         <li><a className="dropdown-item" href="/">Something else here</a></li>
                                     </ul>
-                                </li>
+                                </li> */}
                             </ul>
                             <form className="d-flex" role="search">
                                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
